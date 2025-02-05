@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--    Setter Injection-->
+
+    <!--    bean tag tells to spring:-->
+    <!--            here we are giving you metadata of the class whose object should be created by you(Spring)-->
+
+
+    <!--    1ST OBJECT OF STUDENT TYPE-->
+    <bean class="org.Ritik.Student" id="student1">
+        <!--        class attribute specifies which class , id using which we will be getting class object-->
+        <property name="studentId">
+            <!--property specifies the which element/da we are injecting into-->
+            <!-- value , what value should be injected into the element-->
+            <value>101</value>
+        </property>
+
+        <property name="studentName">
+            <value>Aman</value>
+        </property>
+
+        <!-- we can use 'value' as attribute also.-->
+        <property name="studentAddress" value="Indirapuram"/>
+    </bean>
+
+    <!--    2ND OBJECT OF TYPE STUDENT-->
+    <bean class="org.Ritik.Student" id="student2">
+        <property name="studentId" value="102"/>
+        <property name="studentName" value="Deepanshu"/>
+        <property name="studentAddress" value="Vinod Nagar"/>
+    </bean>
+
+    <!--    3rd Object-->
+    <bean class="org.Ritik.Student" id="student3" p:studentId="103" p:studentName="Ritik"
+          p:studentAddress="Nyay Khand-1st"/>
+
+
+    <!--Setter injection finish-->
+
+</beans>

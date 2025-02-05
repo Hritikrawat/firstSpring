@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean class="org.Ritik.collections.Employee" id="Employee1">
+    <property name="empName" value="Ritik"/>
+    <property name="phone">
+        <set>
+            <value>8721841342</value>
+            <value>9817273802</value>
+            <value>9817273802</value>      <!--will not get printed-->
+            <null></null>
+            <null></null>
+        </set>
+    </property>
+
+    <property name="address">
+        <list>
+            <value>Delhi</value>
+            <value>Kanpur</value>
+            <value>Lucknow</value>
+            <null></null>
+            <null></null>
+        </list>
+    </property>
+
+    <property name="details">
+        <map>
+            <entry key="JAVA" value="2months"/>
+            <entry key="PYTHON" value="3months"/>
+            <entry key="WEB-DEV" value="1month"/>
+        </map>
+    </property>
+</bean>
+
+
+
+</beans>
