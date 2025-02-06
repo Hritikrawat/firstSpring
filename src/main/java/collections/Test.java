@@ -1,4 +1,4 @@
-package org.Ritik.collections;
+package collections;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

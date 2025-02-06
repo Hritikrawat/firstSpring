@@ -2,7 +2,7 @@ package referenceinjection;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.w3c.dom.ls.LSOutput;
+
 
 public class Test
 {

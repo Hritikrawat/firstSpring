@@ -5,7 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<bean class="org.Ritik.collections.Employee" id="Employee1">
+<bean class="collections.Employee" id="Employee1">
     <property name="empName" value="Ritik"/>
     <property name="phone">
         <set>

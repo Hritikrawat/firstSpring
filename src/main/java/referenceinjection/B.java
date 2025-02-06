@@ -12,11 +12,6 @@ public class B {
                 "Y=" + Y +
                 '}';
     }
-
-    public long getY() {
-        return Y;
-    }
-
     public void setY(long y) {
         Y = y;
     }
