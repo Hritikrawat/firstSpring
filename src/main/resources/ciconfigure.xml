@@ -1,0 +1,27 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="CI.Certi" name="cerRef">
+        <constructor-arg value="Java Backend"></constructor-arg>
+    </bean>
+
+    <bean class="CI.Person" name="person">
+<!--    Using this will invoke the constructor of both string type args
+        this is happening because the Spring consider args as String type by deault -->
+
+<!--        <constructor-arg value="Ritik" />-->
+<!--        <constructor-arg value="101" />-->
+
+<!--            <constructor-arg value="101" type="long"/>-->
+<!--            <constructor-arg value="Ritik" />-->
+
+            <constructor-arg ref="cerRef"/>
+            <constructor-arg value="101" type="long"/>
+            <constructor-arg value="Ritik" />
+
+    </bean>
+
+</beans>
