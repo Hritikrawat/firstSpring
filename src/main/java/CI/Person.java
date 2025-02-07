@@ -11,7 +11,6 @@ public class Person {
         this.name = name;
         this.id = id;
     }
-
     public Person (String name, String id)
     {
         System.out.println("String and String");

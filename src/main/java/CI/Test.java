@@ -8,6 +8,8 @@ public class Test {
     {
         ApplicationContext obj = new ClassPathXmlApplicationContext("ciconfigure.xml");
         Person p = (Person)obj.getBean("person");
+        Additon a = (Additon)obj.getBean("add");
         System.out.println(p);
+        System.out.println(a);
     }
 }
