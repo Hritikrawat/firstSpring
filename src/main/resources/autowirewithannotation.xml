@@ -1,0 +1,30 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <context:annotation-config/>
+    <!--    NOTE: name attribute of the dependency class should be same as the reference name in dependent class (here orderDetails in Order class)-->
+    <bean class="autowiringwithannotation.OrderDetails" name="orderDetails1">
+        <property name="item" value="FURNITURE"/>
+        <property name="date" value="9-9-2024"/>
+        <property name="price" value="2010"/>
+    </bean>
+
+    <bean class="autowiringwithannotation.OrderDetails" name="orderDetails2">
+        <property name="item" value="TABLE"/>
+        <property name="date" value="29-19-2024"/>
+        <property name="price" value="2000"/>
+    </bean>
+
+
+
+
+    <bean class="autowiringwithannotation.Order" name="order1">
+        <property name="id" value="O10431"/>
+    </bean>
+</beans>

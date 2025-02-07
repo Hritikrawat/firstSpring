@@ -1,0 +1,30 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!--    NOTE: name attribute of the dependency class should be same as the reference name in dependent class (here orderDetails in Order class)-->
+
+    <bean class="autowiring.OrderDetails" name="orderDetails2">
+        <property name="item" value="Study Table"/>
+        <property name="date" value="10-10-2024"/>
+        <property name="price" value="2000"/>
+    </bean>
+
+<!--    <bean class="autowiring.OrderDetails" name="orderDetails3">-->
+<!--        <property name="item" value="Fan"/>-->
+<!--        <property name="date" value="7-7-2024"/>-->
+<!--        <property name="price" value="1499"/>-->
+<!--    </bean>-->
+
+
+
+<!--    byType , container will check for type of the bean and inject it accordingly   (refernce variable and name attibute doesn't matter here)-->
+
+<!--    <bean class="autowiring.Order" name="order1" autowire="byName">-->
+<!--    <bean class="autowiring.Order" name="order1" autowire="byType">-->
+    <bean class="autowiring.Order" name="order1" autowire="constructor">
+        <property name="id" value="O10431"/>
+    </bean>
+</beans>
