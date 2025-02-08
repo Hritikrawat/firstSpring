@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation=" http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util
+	    https://www.springframework.org/schema/util/spring-util.xsd ">
+
+    <util:list list-class="java.util.ArrayList" id="list">
+        <value>Aman</value>
+        <value>Gagan</value>
+        <value>Raman</value>
+    </util:list>
+
+    <util:map map-class="java.util.HashMap" id="map">
+        <entry key="Maths" value="78"/>
+        <entry key="Physics" value="88"/>
+        <entry key="Maths" value="60"/>
+    </util:map>
+
+    <util:properties id="properties">
+        <prop key="Sem1">Pass</prop>
+        <prop key="Sem2">Pass</prop>
+    </util:properties>
+
+    <bean class="standalonecollections.Student" name="student1">
+        <property name="name" ref="list"/>
+        <property name="marks" ref="map"/>
+        <property name="properties" ref="properties"/>
+    </bean>
+    <bean class="standalonecollections.Student" name="student2">
+        <property name="name" ref="list"/>
+        <property name="marks" ref="map"/>
+        <property name="properties" ref="properties"/>
+    </bean>
+</beans>
